@@ -604,26 +604,30 @@ footer {
         min-height: 70px !important;
     }
 }
-/* ضبط تكبير ومكان صورة البزل */
+/* تنزيل صورة البزل وتقريبها من العنوان */
 .contact-section .puzzle-img {
-    width: 320px !important;            /* تكبير الصورة لتغطي العرض المطلوب */
-    max-width: 90% !important;           /* ضمان تناسقها مع شاشات الجوال */
+    width: 320px !important;              /* الحجم الممتاز */
+    max-width: 90% !important;
     height: auto !important;
     display: block !important;
-    margin: 0 auto -10px auto !important; /* موازنة المسافة بينها وبين العنوان */
+    margin-top: 60px !important;         /* تنزيل الصورة لأسفل */
+    margin-bottom: -35px !important;      /* سحب العنوان لأعلى باتجاه الصورة */
+    margin-left: auto !important;
+    margin-right: auto !important;
     object-fit: contain !important;
 }
 
-/* تقريب العنوان Get In Touch من الصورة */
+/* إزالة أي مساحة زائدة فوق العنوان */
 .contact-section .section-title {
-    margin-top: 5px !important;
+    margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-/* ضبط المقاس لشاشات الجوال الصغيرة */
+/* التناسق على الجوال */
 @media (max-width: 768px) {
     .contact-section .puzzle-img {
-        width: 280px !important;         /* حجم ممتاز ومناسب للجوال */
-        margin-bottom: 0px !important;
+        width: 280px !important;
+        margin-top: 70px !important;     /* مسافة تنزيل مناسبة للشاشة الصغيرة */
+        margin-bottom: -30px !important;
     }
 }
