@@ -507,19 +507,25 @@ section {
     padding: 60px 20px;
 }
 
+/* إجبار صورة التواصل على التكبير والظهور بحجم واضح */
+img.contact-main-icon,
+.contact-section img,
 .contact-main-icon {
-    width: 48px !important;
-    height: 48px !important;
-    object-fit: contain;
-    margin: 0 auto 10px auto;
-    display: block;
+    width: 60px !important;
+    height: 60px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
 }
 
-/* في الجوال تكبر شوية وتظل متناسقة */
 @media (max-width: 768px) {
+    img.contact-main-icon,
+    .contact-section img,
     .contact-main-icon {
-        width: 38px !important;
-        height: 38px !important;
+        width: 45px !important;
+        height: 45px !important;
     }
 }
 .contact-links {
