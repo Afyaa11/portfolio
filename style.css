@@ -1,0 +1,560 @@
+/* ==========================================
+   1. تعريف متغيّرات الألوان والخطوط (:root)
+   ========================================== */
+
+/* ألوان الوضع الداكن (Navy Primary) */
+body.dark-mode {
+    --bg-color: #1F2A44;          /* الكحلي الداكن للخلفية الرئيسية */
+    --card-bg: #151D30;         /* كحلي أغمق للبطاقات لإبراز العمق */
+    --text-color: #FAFAFA;        /* أوف وايت ناصع للنصوص الرئيسية */
+    --text-muted: #D1D5DB;      /* رمادي فاتح مريح للنصوص الجانبية */
+    --accent-gold: #C6A75E;     /* الذهبي الناعم للأزرار والتركيز واللوجو */
+    --nav-bg: rgba(21, 29, 48, 0.85); /* كحلي شفاف للقائمة العائمة */
+    --border-color: rgba(198, 167, 94, 0.25); /* حدود ذهبية خفيفة */
+}
+
+/* ألوان الوضع الفاتح المحدثة (Bright Off-White Mode) */
+body.light-mode {
+    --bg-color: #FAF8F5;         /* أوف وايت كريمي فاتح ومشرق للخلفية الرئيسية */
+    --card-bg: #FFFFFF;         /* أبيض ناصع للبطاقات لزيادة التباين */
+    --text-color: #1F2A44;       /* الكحلي الملكي الغامق جداً للنصوص الرئيسية */
+    --text-muted: #4B5563;     /* كحلي رمادي واضح للنصوص الفرعية */
+    --accent-gold: #B89343;    /* ذهبي أغمق بدرجة بسيطة لضمان التباين */
+    --nav-bg: rgba(250, 248, 245, 0.85); /* أوف وايت شفاف للقائمة العائمة */
+    --border-color: rgba(31, 42, 68, 0.12); /* حدود كحلية ناعمة جداً */
+}
+/* ==========================================
+   إصلاح محاذاة الكروت للغة الإنجليزية (LTR)
+   ========================================== */
+html[lang="en"] .project-card,
+body.en-mode .project-card {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* تعديل الهيدر العلوي للكارت (اللوجو والعنوان) ليصبح يسار */
+html[lang="en"] .project-header-type,
+body.en-mode .project-header-type {
+    direction: ltr !important;
+    justify-content: flex-start !important;
+}
+
+/* ضبط محاذاة العناوين والنصوص */
+html[lang="en"] .project-card h3,
+html[lang="en"] .project-desc,
+body.en-mode .project-card h3,
+body.en-mode .project-desc {
+    text-align: left !important;
+}
+/* ==========================================
+   2. إعادة الضبط الشاملة والتنسيقات العامة
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* تنسيق صورة اللوجو الرئيسي */
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- النافبار --- */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--accent-gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang-btn {
+    background: var(--accent-gold);
+    color: #1F2A44;
+    border: none;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- الهيرو والأقسام --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.badge-tag {
+    background: rgba(198, 167, 94, 0.15);
+    color: var(--accent-gold);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid rgba(198, 167, 94, 0.3);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 15px 0 5px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.hero-desc {
+    max-width: 600px;
+    margin: 20px auto;
+    color: var(--text-muted);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent-gold);
+    color: #1F2A44;
+}
+
+.btn-secondary {
+    border: 2px solid var(--accent-gold);
+    color: var(--text-color);
+}
+
+.btn-cv {
+    border: 2px solid var(--accent-gold);
+    background: rgba(198, 167, 94, 0.1);
+    color: var(--text-color);
+}
+
+.btn-cv:hover {
+    background: var(--accent-gold);
+    color: #1F2A44;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(198, 167, 94, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(198, 167, 94, 0.25);
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-gold);
+}
+
+/* ==========================================
+   3. التنسيق الموحد لكروت المشاريع
+   ========================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card,
+.project-card.project-qandeel,
+.project-card.project-unistore,
+.project-card.powerbi-theme {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: right !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-gold) !important;
+}
+
+/* الهيدر العلوي تثبيت اللوجو يمين وبجانبه النص */
+.project-header-type {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px;
+    margin-bottom: 12px;
+    direction: rtl !important;
+}
+
+.project-type-text {
+    color: var(--accent-gold) !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.project-card-logo,
+.project-logo {
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: contain;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* توحيد عناوين المشاريع (ذهبي وبولد) */
+.project-card h3,
+.project-card .pbi-title {
+    color: var(--accent-gold) !important;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    margin: 6px 0 10px 0;
+    text-align: right !important;
+}
+
+/* الوصف */
+.project-desc {
+    text-align: right !important;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted) !important;
+    margin-bottom: 12px;
+}
+
+/* التاقات النصية */
+.tech-tags,
+.pbi-tech-tags {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 12px 0 !important;
+}
+
+.tech-tags span,
+.pbi-tech-tags span {
+    background: transparent !important;
+    border: none !important;
+    color: var(--accent-gold) !important;
+    font-weight: 800 !important;
+    font-size: 0.88rem !important;
+    padding: 0 !important;
+}
+
+/* توحيد الأزرار والخط أبيض */
+.project-card .project-btn,
+.project-card .pbi-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 11px 0;
+    background-color: var(--accent-gold) !important;
+    color: #ffffff !important;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(198, 167, 94, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card .project-btn:hover,
+.project-card .pbi-btn:hover {
+    background-color: #b89343 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(198, 167, 94, 0.35);
+}
+
+/* تضمين تقرير Power BI */
+.powerbi-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+}
+
+.powerbi-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* ==========================================
+   النافذة المنبثقة للشهادة (إخفاء تام افتراضياً)
+   ========================================== */
+.cert-modal {
+    display: none; /* إخفاء النافذة كلياً بشكل افتراضي */
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* يُطبق هذا الكلاس عبر الجافاسكربت فقط عند الضغط على الزر */
+.cert-modal.show,
+.cert-modal.active {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-modal-content img,
+.cert-img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 82vh !important;
+    object-fit: contain !important;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.cert-close-btn {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.cert-close-btn:hover {
+    color: var(--accent-gold);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .cert-modal-content img,
+    .cert-img {
+        max-height: 75vh !important;
+    }
+    .cert-close-btn {
+        top: -35px;
+        font-size: 28px;
+    }
+}
+/* ==========================================
+   5. التواصل وتذييل الصفحة (تنسيق الأزرار الذهبية)
+   ========================================== */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-main-icon {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-top: 25px !important;
+}
+
+/* إعادة تنسيق روابط الأزرار لمنع ظهور اللون الأزرق الافتراضي */
+.contact-links a,
+.contact-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 24px !important;
+    border: 2px solid var(--accent-gold) !important;
+    background: rgba(198, 167, 94, 0.1) !important;
+    color: var(--text-color) !important;       /* لون النص أوف وايت/كحلي حسب الوضع */
+    border-radius: 30px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    text-decoration: none !important;            /* إزالة الخط الأزرق السفلي */
+    transition: all 0.3s ease !important;
+    direction: ltr;
+    box-shadow: none !important;
+}
+
+/* تأثير التمرير للماوس على أزرار التواصل */
+.contact-links a:hover,
+.contact-btn:hover {
+    background: var(--accent-gold) !important;
+    color: #1F2A44 !important;                 /* يتحول النص للكحلي الملكي عند التمرير */
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(198, 167, 94, 0.3) !important;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
