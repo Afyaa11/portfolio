@@ -623,3 +623,36 @@ footer {
         border-radius: 20px !important;
     }
 }
+
+/* ==========================================
+   إصلاح القائمة وتكبير الصورة مع الحفاظ على الكود السابق
+   ========================================== */
+
+/* 1. إخفاء النقاط وتعديل لون الروابط في الهيدر */
+.nav-links {
+    list-style-type: none !important;
+    display: flex !important;
+    gap: 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-links li {
+    list-style: none !important;
+}
+
+.nav-links a {
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+}
+
+/* 2. إجبار صورة التواصل على التكبير فوراً */
+.contact-section .contact-main-icon,
+img.contact-main-icon {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: none !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
+    object-fit: contain !important;
+}
