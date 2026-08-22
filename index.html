@@ -3,93 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أفياء القحطاني | Afyaa Alqahtani - Portfolio</title>
+    <title>Afyaa Alqahtani - Portfolio</title>
 
-    <!-- استدعاء خط Tajawal للعربي و Inter للإنجليزي من جوجل -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <!-- ربط ملف التنسيقات CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode"> <!-- الوضع الافتراضي داكن ومتاح التبديل -->
+<body class="light-mode">
 
-    <!-- شريط النافبار العائم في الأعلى -->
+    <!-- Navbar -->
     <nav class="navbar">
-<div class="logo">
-    <a href="#hero">
-        <img src="photo_2026-08-21_16-17-37-removebg-preview.png" alt="AFYAA Logo" class="logo-img">
-    </a>
-</div>
-        <!-- روابط التنقل السريع بين الأقسام -->
+        <div class="logo">
+            <a href="#hero">
+                <img src="photo_2026-08-21_16-17-37-removebg-preview.png" alt="AFYAA Logo" class="logo-img">
+            </a>
+        </div>
+
         <ul class="nav-links">
-            <li><a href="#hero" data-ar="من أنا" data-en="About">من أنـا</a></li>
-            <li><a href="#skills" data-ar="المهارات" data-en="Skills">المهـارات</a></li>
-            <li><a href="#projects" data-ar="المشاريع" data-en="Projects">المشـاريـع</a></li>
-            <li><a href="#contact" data-ar="التواصل" data-en="Contact">التـواصـل</a></li>
+            <li><a href="#hero" data-ar="من أنا" data-en="About">About</a></li>
+            <li><a href="#skills" data-ar="المهارات" data-en="Skills">Skills</a></li>
+            <li><a href="#projects" data-ar="المشاريع" data-en="Projects">Projects</a></li>
+            <li><a href="#contact" data-ar="التواصل" data-en="Contact">Contact</a></li>
         </ul>
 
-        <!-- أزرار التحكم بالتفاعل (الليل/النهار + اللغة) -->
         <div class="nav-controls">
-            <!-- زر تغيير اللغة -->
-            <button id="lang-toggle" class="control-btn lang-btn">English</button>
+            <button id="lang-toggle" class="control-btn lang-btn">عربي</button>
         </div>
     </nav>
 
-    <!-- 1. واجهة البداية (Hero Section) -->
-<section id="hero" class="hero">
-    <div class="hero-content">
-        <span class="badge-tag" data-ar=" مرحباً بك في معرض أعمالي" data-en=" Welcome to my portfolio"> مرحبًـا بـك فـي مـعـرض أعـمـالـي</span>
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <span class="badge-tag" data-ar="مرحباً بك في معرض أعمالي" data-en="Welcome to my portfolio">Welcome to my portfolio</span>
 
-        <h1 data-ar="أفياء سعد القحطاني" data-en="Afyaa Saad Alqahtani">أفيـاء سـعـد القحـطـاني</h1>
+            <h1 data-ar="أفياء سعد القحطاني" data-en="Afyaa Saad Alqahtani">Afyaa Saad Alqahtani</h1>
 
-        <p class="subtitle" data-ar="نظم معلومات وتحليل الأعمال | مطورة واجهات ويب" data-en="Information Systems & Business Analytic | Web Developer">
-            نظم معلومات وتحليل الأعمال | مطورة واجهات ويب
-        </p>
+            <p class="subtitle" data-ar="نظم معلومات وتحليل الأعمال | مطورة واجهات ويب" data-en="Information Systems & Business Analytics | Web Developer">
+                Information Systems & Business Analytics | Web Developer
+            </p>
 
-        <p class="hero-desc"
-           data-ar="طالبة في السنة الأخيرة بتخصص نظم المعلومات وتحليل الأعمال، أجمع بين شغف تحليل البيانات وبناء واجهات الويب الرقمية. أسعى لفرصة تدريب تعاوني أساهم من خلالها في تقديم حلول تقنية تفاعلية وأثري بها تجربتي المهنية."
-           data-en="Senior Information Systems & Business Analytics student, combining a passion for data analytics and front-end web development. Actively seeking a CO-OP training opportunity to contribute to interactive tech solutions.">
-            طالبة في السنة الأخيرة بتخصص نظم المعلومات وتحليل الأعمال، أجمع بين شغف تحليل البيانات وبناء واجهات الويب الرقمية. أسعى لفرصة تدريب تعاوني أساهم من خلالها في تقديم حلول تقنية تفاعلية وأثري بها تجربتي المهنية.
-        </p>
+            <p class="hero-desc"
+               data-ar="طالبة في السنة الأخيرة بتخصص نظم المعلومات وتحليل الأعمال، أجمع بين شغف تحليل البيانات وبناء واجهات الويب الرقمية. أسعى لفرصة تدريب تعاوني أساهم من خلالها في تقديم حلول تقنية تفاعلية وأثري بها تجربتي المهنية."
+               data-en="Senior Information Systems & Business Analytics student, combining a passion for data analytics and front-end web development. Actively seeking a CO-OP training opportunity to contribute to interactive tech solutions.">
+                Senior Information Systems & Business Analytics student, combining a passion for data analytics and front-end web development. Actively seeking a CO-OP training opportunity to contribute to interactive tech solutions.
+            </p>
 
-        <div class="hero-btns">
-            <a href="#projects" class="btn btn-primary" data-ar="استكشف الأعمال 🚀" data-en="Explore Projects 🚀">استكشف الأعمال 🚀</a>
-            <a href="#contact" class="btn btn-secondary" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</a>
-            <a href="CV.pdf" download class="btn btn-cv" data-ar="السيرة الذاتية 📄" data-en="Download CV 📄">السيرة الذاتية 📄</a>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary" data-ar="استكشف الأعمال 🚀" data-en="Explore Projects 🚀">Explore Projects 🚀</a>
+                <a href="#contact" class="btn btn-secondary" data-ar="تواصل معي" data-en="Contact Me">Contact Me</a>
+                <a href="CV.pdf" download class="btn btn-cv" data-ar="السيرة الذاتية 📄" data-en="Download CV 📄">Download CV 📄</a>
+            </div>
         </div>
-    </div>
-</section>
-    <!-- 2. قسم المهارات (Skills Section) -->
+    </section>
+
+    <!-- 2. Skills Section -->
     <section id="skills" class="skills-section">
-        <h2 class="section-title" data-ar="المهارات والتقنيات" data-en="Skills & Tech Stack">المهارات والتقنيات</h2>
+        <h2 class="section-title" data-ar="المهارات والتقنيات" data-en="Skills & Tech Stack">Skills & Tech Stack</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <div class="icon">💻</div>
-                <h3 data-ar="تطوير الويب" data-en="Web Development">تطوير الويب</h3>
+                <h3 data-ar="تطوير الويب" data-en="Web Development">Web Development</h3>
                 <p>HTML, CSS, JavaScript, Responsive Design, GitHub Pages</p>
             </div>
             <div class="skill-card">
                 <div class="icon">📊</div>
-                <h3 data-ar="تحليل البيانات و BI" data-en="Data & Business Intelligence">تحليل البيانات و BI</h3>
+                <h3 data-ar="تحليل البيانات و BI" data-en="Data & Business Intelligence">Data & Business Intelligence</h3>
                 <p>Power BI, Interactive Dashboards, Data Visualization, Business Analytics</p>
             </div>
             <div class="skill-card">
                 <div class="icon">🤝</div>
-                <h3 data-ar="العلاقات العامة والتنظيم" data-en="PR & Communication">العلاقات العامة والتنظيم</h3>
+                <h3 data-ar="العلاقات العامة والتنظيم" data-en="PR & Communication">PR & Communication</h3>
                 <p>Public Relations, Event Management, Strategic Communication, Graphic Design</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. قسم المشاريع (Projects Section) -->
+    <!-- 3. Projects Section -->
     <section id="projects" class="projects-section">
-        <h2 class="section-title" data-ar="أبرز المشاريع" data-en="Featured Projects">أبرز المشاريع</h2>
+        <h2 class="section-title" data-ar="أبرز المشاريع" data-en="Featured Projects">Featured Projects</h2>
 
         <div class="projects-grid">
 
-            <!-- كارت مشروع Unistore -->
+            <!-- Unistore -->
             <div class="project-card project-unistore">
                 <div class="project-header">
                     <div class="project-brand">
@@ -101,7 +100,7 @@
                 <p class="project-desc"
                    data-ar="منصة إلكترونية تم تطويرها كـ مشروع جماعي تتيح للطلاب بيع وتأجير المستلزمات والكتب الدراسية المستعملة فيما بينهم بأسعار مناسبة."
                    data-en="An e-commerce platform developed as a team project enabling students to buy, sell, and rent used study materials at affordable prices.">
-                   منصة إلكترونية تم تطويرها كـ مشروع جماعي تتيح للطلاب بيع وتأجير المستلزمات والكتب الدراسية المستعملة فيما بينهم بأسعار مناسبة.
+                   An e-commerce platform developed as a team project enabling students to buy, sell, and rent used study materials at affordable prices.
                 </p>
 
                 <div class="tech-tags">
@@ -112,24 +111,24 @@
 
                 <div class="project-links">
                     <a href="https://wbaproject.github.io/Unistore/index.html" target="_blank" class="project-btn" data-ar="زيارة المنصة 🔗" data-en="Visit Platform 🔗">
-                        زيارة المنصة 🔗
+                        Visit Platform 🔗
                     </a>
                 </div>
             </div>
 
-            <!-- كارت مشروع برنامج قنديل -->
+            <!-- Qandeel -->
             <div class="project-card project-qandeel">
                 <div class="project-header">
                     <div class="project-brand">
                         <img src="شفاف%20%20قنديل.png" alt="Qandeel Logo" class="project-logo" onerror="this.style.display='none'">
                     </div>
-                    <h3 data-ar="برنامج قنديل" data-en="Qandeel Program">برنامج قنديل</h3>
+                    <h3 data-ar="برنامج قنديل" data-en="Qandeel Program">Qandeel Program</h3>
                 </div>
 
                 <p class="project-desc"
                    data-ar="موقع إلكتروني تم تطويره بالكامل لخدمة مبادرة قنديل التعليمية والتربوية، يتضمن مؤشر دعم تفاعلي لحساب التبرعات وإحصائيات المبادرة."
                    data-en="A fully developed website serving the Qandeel educational initiative, featuring an interactive donation tracker and initiative statistics.">
-                   موقع إلكتروني تم تطويره بالكامل لخدمة مبادرة قنديل التعليمية والتربوية، يتضمن مؤشر دعم تفاعلي لحساب التبرعات وإحصائيات المبادرة.
+                   A fully developed website serving the Qandeel educational initiative, featuring an interactive donation tracker and initiative statistics.
                 </p>
 
                 <div class="tech-tags">
@@ -140,93 +139,85 @@
 
                 <div class="project-links">
                     <a href="https://qandeel-fund.github.io/qandeel/" target="_blank" class="project-btn" data-ar="زيارة المنصة 🔗" data-en="Visit Platform 🔗">
-                        زيارة المنصة 🔗
+                        Visit Platform 🔗
                     </a>
                 </div>
             </div>
 
-<!-- بطاقة المشروع داخل Grid المشاريع -->
-<div class="project-card powerbi-theme">
-    <!-- 1. العنوان الفرعي + اللوجو -->
-    <div class="project-header-type">
-        <img src="نظممي.png" alt="Nazmi Logo" class="project-card-logo">
-    </div>
+            <!-- PowerBI -->
+            <div class="project-card powerbi-theme">
+                <div class="project-header-type">
+                    <img src="نظممي.png" alt="Nazmi Logo" class="project-card-logo">
+                </div>
 
-    <!-- 2. العنوان الرئيسي للمشروع -->
-    <h3 class="pbi-title" data-ar="معسكر تحليل البيانات باستخدام Power BI" data-en="Data Analytics Bootcamp using Power BI">
-        معسكر تحليل البيانات باستخدام Power BI
-    </h3>
+                <h3 class="pbi-title" data-ar="معسكر تحليل البيانات باستخدام Power BI" data-en="Data Analytics Bootcamp using Power BI">
+                    Data Analytics Bootcamp using Power BI
+                </h3>
 
-    <!-- 3. الفقرة النصية (الوصف والتفاصيل) -->
-    <p class="project-desc"
-       data-ar="تم بناء وتصميم هذه اللوحة التفاعلية كتطبيق عملي متميز ضمن معسكر تحليل البيانات باستخدام Power BI (بواقع 6 ساعات تدريبية) المقدم من مبادرة نظمي بالتعاون مع Qafza Tech و SaudiAIS، حيث تعكس أداء المبيعات وحجم الأرباح وتوزيعها حسب الفئات والأقاليم لتمكين متخذي القرار من قراءة البيانات بفاعلية."
-       data-en="Designed and built as a practical hands-on project during the intensive 6-hour Data Analytics Bootcamp using Power BI provided by Nazmi Initiative in collaboration with Qafza Tech and SaudiAIS. The dashboard visualizes sales performance and profit distribution across categories and regions to support data-driven decisions.">
-        تم بناء وتصميم هذه اللوحة التفاعلية كتطبيق عملي متميز ضمن معسكر تحليل البيانات باستخدام Power BI (بواقع 6 ساعات تدريبية) المقدم من مبادرة نظمي بالتعاون مع Qafza Tech و SaudiAIS، حيث تعكس أداء المبيعات وحجم الأرباح وتوزيعها حسب الفئات والأقاليم لتمكين متخذي القرار من قراءة البيانات بفاعلية.
-    </p>
+                <p class="project-desc"
+                   data-ar="تم بناء وتصميم هذه اللوحة التفاعلية كتطبيق عملي متميز ضمن معسكر تحليل البيانات باستخدام Power BI (بواقع 6 ساعات تدريبية) المقدم من مبادرة نظمي بالتعاون مع Qafza Tech و SaudiAIS، حيث تعكس أداء المبيعات وحجم الأرباح وتوزيعها حسب الفئات والأقاليم لتمكين متخذي القرار من قراءة البيانات بفاعلية."
+                   data-en="Designed and built as a practical hands-on project during the intensive 6-hour Data Analytics Bootcamp using Power BI provided by Nazmi Initiative in collaboration with Qafza Tech and SaudiAIS. The dashboard visualizes sales performance and profit distribution across categories and regions to support data-driven decisions.">
+                    Designed and built as a practical hands-on project during the intensive 6-hour Data Analytics Bootcamp using Power BI provided by Nazmi Initiative in collaboration with Qafza Tech and SaudiAIS. The dashboard visualizes sales performance and profit distribution across categories and regions to support data-driven decisions.
+                </p>
 
-    <!-- 4. التقرير التفاعلي -->
-    <div class="powerbi-wrapper">
-        <iframe title="Sales & Profitability Dashboard"
-                src="https://app.powerbi.com/view?r=eyJrIjoiNzE5OWY2OTYtNTY0ZC00ODJiLWJjOTEtZjljZTA5YTAxY2NlIiwidCI6IjJjODZiYmZjLThkMDQtNDFmZi1hODNhLTk0MmYwNzVlMGY2MCIsImMiOjl9"
-                frameborder="0"
-                allowFullScreen="true">
-        </iframe>
-    </div>
+                <div class="powerbi-wrapper">
+                    <iframe title="Sales & Profitability Dashboard"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiNzE5OWY2OTYtNTY0ZC00ODJiLWJjOTEtZjljZTA5YTAxY2NlIiwidCI6IjJjODZiYmZjLThkMDQtNDFmZi1hODNhLTk0MmYwNzVlMGY2MCIsImMiOjl9"
+                            frameborder="0"
+                            allowFullScreen="true">
+                    </iframe>
+                </div>
 
-    <!-- 5. التاقات النصية العريضة -->
-    <div class="pbi-tech-tags">
-        <span>Power BI</span>
-        <span>Data Analytics</span>
-    </div>
+                <div class="pbi-tech-tags">
+                    <span>Power BI</span>
+                    <span>Data Analytics</span>
+                </div>
 
-    <!-- 6. زر فتح الـ Pop-up -->
-    <button type="button" onclick="openCertModal()" class="pbi-btn" data-ar="عرض شهادة المعسكر 🔗" data-en="View Certificate 🔗">
-        عرض شهادة المعسكر 🔗
-    </button>
-</div>
+                <button type="button" onclick="openCertModal()" class="pbi-btn" data-ar="عرض شهادة المعسكر 🔗" data-en="View Certificate 🔗">
+                    View Certificate 🔗
+                </button>
+            </div>
 
-<!-- ========================================== -->
-<!-- يُوضع هذا الجزء في أسفل ملف HTML قبل </body> مباشرة -->
-<!-- ========================================== -->
-<div id="certModal" class="cert-modal">
-    <div class="cert-modal-content">
-        <span class="cert-close-btn" onclick="closeCertModal()">&times;</span>
-        <img src="أفياء بنت سعد القحطاني.png" alt="الشهادة" class="cert-img">
-    </div>
-</div>
+            <div id="certModal" class="cert-modal">
+                <div class="cert-modal-content">
+                    <span class="cert-close-btn" onclick="closeCertModal()">&times;</span>
+                    <img src="أفياء بنت سعد القحطاني.png" alt="Certificate" class="cert-img">
+                </div>
+            </div>
 
         </div>
     </section>
 
-    <!-- 4. قسم التواصل (Contact Section) -->
+    <!-- 4. Contact Section -->
     <section id="contact" class="contact-section">
-    <img src="YOU DREAM IT.png" alt="Contact Icon" class="contact-main-icon">
-    <h2 class="section-title" data-ar="تواصل معي" data-en="Get In Touch">تواصل معي</h2>
-    <p data-ar="مهتمة بفرص التدريب التعاوني والأنشطة التنافسية في تحليل البيانات وتطوير الويب." data-en="Open for Coop Training opportunities and impactful projects in BI & Web Development.">
-        مهتمة بفرص التدريب التعاوني والأنشطة التنافسية في تحليل البيانات وتطوير الويب.
-    </p>
+        <img src="YOU DREAM IT.png" alt="Contact Icon" class="contact-main-icon puzzle-img">
 
-    <div class="contact-links">
-        <a href="https://wa.me/966553647511?text=مرحبـًا%20أفياء،%20اطلعت%20على%20معرض%20أعمالكِ%20وأود%20التواصل%20معكِ%20بخصوص%20فرصة%20تدريب%20تعاوني."
-   target="_blank"
-   class="contact-btn"
-   data-ar="واتس اب مباشر"
-   data-en="Direct WhatsApp">
-   واتس اب مباشر
-</a>
-        <a href="mailto:Afiasaad16@gmail.com" class="contact-btn">Afiasaad16@gmail.com</a>
-        <a href="tel:0553647511" class="contact-btn">0553647511</a>
-    </div>
+        <h2 class="section-title" data-ar="تواصل معي" data-en="Get In Touch">Get In Touch</h2>
+        <p data-ar="مهتمة بفرص التدريب التعاوني والأنشطة التنافسية في تحليل البيانات وتطوير الويب." data-en="Open for Coop Training opportunities and impactful projects in BI & Web Development.">
+            Open for Coop Training opportunities and impactful projects in BI & Web Development.
+        </p>
+
+        <div class="contact-links">
+            <a href="https://wa.me/966553647511?text=مرحبـًا%20أفياء،%20اطلعت%20على%20معرض%20أعمالكِ%20وأود%20التواصل%20معكِ%20بخصوص%20فرصة%20تدريب%20تعاوني."
+               target="_blank"
+               class="contact-btn"
+               data-ar="واتس اب مباشر"
+               data-en="Direct WhatsApp">
+               Direct WhatsApp
+            </a>
+            <a href="mailto:Afiasaad16@gmail.com" class="contact-btn">Afiasaad16@gmail.com</a>
+            <a href="tel:0553647511" class="contact-btn">0553647511</a>
+        </div>
     </section>
 
-    <!-- فوتر الموقع -->
+    <!-- Footer -->
     <footer>
-    <p data-ar="© 2026 أفياء القحطاني" data-en="© 2026 Afyaa Alqahtani">
-        © 2026 أفياء القحطاني
-    </p>
-</footer>
+        <p data-ar="© 2026 أفياء القحطاني" data-en="© 2026 Afyaa Alqahtani">
+            © 2026 Afyaa Alqahtani
+        </p>
+    </footer>
 
-    <!-- ربط ملف الجافاسكريبت للحركات والتفاعل -->
+    <!-- JS -->
     <script src="script.js"></script>
 </body>
 </html>
