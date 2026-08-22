@@ -604,25 +604,26 @@ footer {
         min-height: 70px !important;
     }
 }
-/* 1. ضبط صورة البزل وإلغاء المساحات الزائدة */
+/* ضبط تكبير ومكان صورة البزل */
 .contact-section .puzzle-img {
-    width: 280px !important;       /* الحجم المناسب للوضوح */
+    width: 320px !important;            /* تكبير الصورة لتغطي العرض المطلوب */
+    max-width: 90% !important;           /* ضمان تناسقها مع شاشات الجوال */
     height: auto !important;
     display: block !important;
-    margin: 0 auto -32px auto !important; /* الهامش السلبي (-20px) يسحب العنوان لأعلى باتجاه الصورة */
+    margin: 0 auto -10px auto !important; /* موازنة المسافة بينها وبين العنوان */
     object-fit: contain !important;
 }
 
-/* 2. إلغاء الهامش العلوي الزائد لعنوان (تواصل معي) */
+/* تقريب العنوان Get In Touch من الصورة */
 .contact-section .section-title {
-    margin-top: 0 !important;
+    margin-top: 5px !important;
     padding-top: 0 !important;
 }
 
-/* استجابة الجوال */
+/* ضبط المقاس لشاشات الجوال الصغيرة */
 @media (max-width: 768px) {
     .contact-section .puzzle-img {
-        width: 280px !important;
-        margin-bottom: -10px !important;
+        width: 280px !important;         /* حجم ممتاز ومناسب للجوال */
+        margin-bottom: 0px !important;
     }
 }
