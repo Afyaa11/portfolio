@@ -606,7 +606,7 @@ footer {
 }
 /* تنزيل صورة البزل وتقريبها من العنوان */
 .contact-section .puzzle-img {
-    width: 320px !important;              /* الحجم الممتاز */
+    width: 450px !important;              /* الحجم الممتاز */
     max-width: 90% !important;
     height: auto !important;
     display: block !important;
@@ -626,8 +626,8 @@ footer {
 /* التناسق على الجوال */
 @media (max-width: 768px) {
     .contact-section .puzzle-img {
-        width: 280px !important;
-        margin-top: 70px !important;     /* مسافة تنزيل مناسبة للشاشة الصغيرة */
-        margin-bottom: -30px !important;
+        width: 350px !important;
+        margin-top: 50px !important;     /* مسافة تنزيل مناسبة للشاشة الصغيرة */
+        margin-bottom: -50px !important;
     }
 }
