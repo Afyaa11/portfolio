@@ -1,13 +1,11 @@
 // ==========================================
-// 1. إدارة اللغة والاتجاهات (الافتراضي: الإنجليزية)
+// إدارة اللغة والاتجاهات (الافتراضي: الإنجليزية)
 // ==========================================
-const langToggleBtn = document.getElementById('lang-toggle');
-
-// استرجاع اللغة المحفوظة أو اعتماد الإنجليزية كافتراضي
-let currentLang = localStorage.getItem('site_lang') || 'en';
 
 function updateLanguage(lang) {
-    currentLang = lang;
+    const langToggleBtn = document.getElementById('lang-toggle');
+    
+    // حفظ اللغة في الـ LocalStorage
     localStorage.setItem('site_lang', lang);
 
     if (lang === 'en') {
@@ -24,15 +22,41 @@ function updateLanguage(lang) {
         if (langToggleBtn) langToggleBtn.textContent = 'English';
     }
 
-    // ترجمة جميع العناصر التي تحتوي على data-en و data-ar
+    // ترجمة النصوص بناءً على خصائص data-ar و data-en
     const elementsToTranslate = document.querySelectorAll('[data-ar][data-en]');
     elementsToTranslate.forEach(el => {
         const text = el.getAttribute(`data-${lang}`);
         if (text) el.textContent = text;
     });
 }
+
+// تنفيذ الكود بمجرد جاهزية عناصر الصفحة (DOM Ready)
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. جلب اللغة المحفوظة أو اعتماد الإنجليزية كخيار افتراضي أولي
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    updateLanguage(savedLang);
+
+    // 2. ربط زر التبديل عند الضغط عليه
+    const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const currentLang = localStorage.getItem('site_lang') || 'en';
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            updateLanguage(newLang);
+        });
+    }
+
+    // 3. إغلاق النافذة المنبثقة عند الضغط على زر Escape
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeCertModal();
+        }
+    });
+});
+
 // ==========================================
-// 2. النافذة المنبثقة للشهادات (Cert Modal)
+// النافذة المنبثقة للشهادات (Cert Modal)
 // ==========================================
 function openCertModal() {
     const modal = document.getElementById("certModal");
@@ -50,34 +74,10 @@ function closeCertModal() {
     }
 }
 
-// ==========================================
-// 3. مستمعي الأحداث (Event Listeners)
-// ==========================================
-document.addEventListener('DOMContentLoaded', () => {
-    // تطبيق اللغة فور تحميل الصفحة
-    updateLanguage(currentLang);
-
-    // زر تغيير اللغة
-    if (langToggleBtn) {
-        langToggleBtn.addEventListener('click', () => {
-            const newLang = currentLang === 'ar' ? 'en' : 'ar';
-            updateLanguage(newLang);
-        });
+// إغلاق Modal عند النقر خارجه
+window.onclick = function(event) {
+    const modal = document.getElementById("certModal");
+    if (event.target === modal) {
+        closeCertModal();
     }
-
-    // إغلاق النافذة المنبثقة عند النقر خارج الصورة
-    window.addEventListener('click', (event) => {
-        const modal = document.getElementById("certModal");
-        if (event.target === modal) {
-            closeCertModal();
-        }
-    });
-
-    // إغلاق النافذة المنبثقة بزر Escape
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            closeCertModal();
-        }
-    });
-});
 };
