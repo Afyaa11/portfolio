@@ -76,7 +76,16 @@ body {
     transform: scale(1.05);
 }
 
-/* --- النافبار --- */
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--accent-gold);
+}
+/* --- النافبار المحدث بدون زر الليل --- */
 .navbar {
     position: fixed;
     top: 20px;
@@ -88,35 +97,35 @@ body {
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 50px;
-    padding: 12px 30px;
+    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--text-color);
+/* تنسيق الجوال لشريط التنقل */
+@media (max-width: 768px) {
+    .navbar {
+        top: 10px;
+        width: 95%;
+        padding: 8px 12px !important;
+    }
+
+    .nav-links {
+        gap: 8px !important;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem !important;
+    }
+
+    .lang-btn {
+        padding: 5px 12px !important;
+        font-size: 0.78rem !important;
+    }
 }
 
-.logo span {
-    color: var(--accent-gold);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
 
 .nav-links a:hover {
     color: var(--accent-gold);
@@ -127,26 +136,8 @@ body {
     gap: 10px;
 }
 
-.control-btn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.lang-btn {
-    background: var(--accent-gold);
-    color: #1F2A44;
-    border: none;
-}
 
-.control-btn:hover {
-    transform: scale(1.05);
-}
 
 /* --- الهيرو والأقسام --- */
 .hero {
