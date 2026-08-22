@@ -508,12 +508,20 @@ section {
 }
 
 .contact-main-icon {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
     display: block;
-    text-align: center;
 }
 
+/* في الجوال تكبر شوية وتظل متناسقة */
+@media (max-width: 768px) {
+    .contact-main-icon {
+        width: 38px !important;
+        height: 38px !important;
+    }
+}
 .contact-links {
     display: flex !important;
     justify-content: center !important;
